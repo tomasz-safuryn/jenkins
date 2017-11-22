@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-		find .
+		ls
                 echo 'Building..'
             }
         }
