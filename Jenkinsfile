@@ -9,6 +9,7 @@ pipeline {
         }
         stage('Build') {
             steps {
+		find .
                 echo 'Building..'
             }
         }
