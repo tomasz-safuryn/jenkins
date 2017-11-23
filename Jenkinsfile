@@ -15,11 +15,12 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-		sh 'ls -al'
 		sh 'dockerfiles'
-		sh 'ls -al'
 		sh 'cloudbuild >cloudbuild.yaml'
-		sh 'ls -al'
+		sh 'gcloud alpha container builds create . \
+                       --project="orbitera-dev" --config=cloudbuild.yaml --verbosity=info --timeout=1h \
+                       --gcs-source-staging-dir="gs://cpe-docker-testing/staging" \
+                       --gcs-log-dir="gs://cpe-docker-testing/logs"'
             }
         }
         stage('Test') {
