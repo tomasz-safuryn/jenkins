@@ -10,6 +10,7 @@ pipeline {
         stage('Update') {
             steps {
                 echo 'Updating..'
+		sh 'update.sh'
             }
         }
         stage('Build') {
