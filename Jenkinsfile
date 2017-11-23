@@ -18,7 +18,7 @@ pipeline {
 		sh 'ls -al'
 		sh 'dockerfiles'
 		sh 'ls -al'
-		sh 'cloudbulild >cloudbuild.yaml'
+		sh 'cloudbuild >cloudbuild.yaml'
 		sh 'ls -al'
             }
         }
