@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Git') {
             steps {
-                git credentialsId: '4d3bc575-26a7-41af-81af-6bda61f7fd82', url: 'git@github.com:tomasz-safuryn/nginx-docker.git'
+                git credentialsId: 'a4e0d304-6bbb-4313-bb7b-a9f2304f7bfa', url: 'git@github.com:tomasz-safuryn/nginx-docker.git'
             }
         }
         stage('Update') {
